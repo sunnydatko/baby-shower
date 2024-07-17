@@ -66,6 +66,9 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textDecoration: "none",
+          ":hover": {
+            textDecoration: "underline",
+          },
         },
       },
     },
@@ -90,13 +93,6 @@ const theme = createTheme({
           "&:hover": {
             color: "#48d1ff",
           },
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        filled: {
-          color: "#ffffff",
         },
       },
     },
