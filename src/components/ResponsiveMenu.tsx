@@ -82,7 +82,7 @@ const ResponsiveMenu = (props: ResponsiveMenuProps) => {
             <MenuIcon />
           </IconButton>
           <Typography sx={{ color: "primary.dark", display: { sm: "none" } }}>
-            Sunny & Ryan Twins Baby Shower
+            Twins Baby Shower
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map(({ name, url }) => (
