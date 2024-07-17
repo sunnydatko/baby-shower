@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Link, Typography, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
 
 import backgroundImage from "../assets/b2.jpg";
@@ -51,35 +51,42 @@ const TextContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const LocationSection = () => (
-  <Section id="location">
-    <PhotoContainer />
-    <TextContainer>
-      <Typography variant="h2" gutterBottom>
-        Location
-      </Typography>
-      <Typography variant="h5">
-        <Link target="_blank" href="https://www.goodliferesorts.com/">
-          Good Life Resorts
-        </Link>
-      </Typography>
-      <Typography variant="body1">
-        3233 Market St, San Diego, CA 92102
-      </Typography>
-      <Typography variant="body1">
-        Room:{" "}
-        <Link
-          target="_blank"
-          href="https://goodliferesorts.guestybookings.com/properties/642c8459f043c8002cec1ecf?city=San+Diego"
-        >
-          The Bamboo Garden
-        </Link>
-      </Typography>
-      <Typography variant="body1" sx={{ paddingBottom: 20 }}>
-        Plenty of free street parking available!
-      </Typography>
-    </TextContainer>
-  </Section>
-);
+const LocationSection = () => {
+  const theme = useTheme();
+
+  return (
+    <Section id="location">
+      <PhotoContainer />
+      <TextContainer>
+        <Typography variant="h2" gutterBottom>
+          Location
+        </Typography>
+        <Typography variant="h5">
+          <Link target="_blank" href="https://www.goodliferesorts.com/">
+            Good Life Resorts
+          </Link>
+        </Typography>
+        <Typography variant="body1">
+          3233 Market St, San Diego, CA 92102
+        </Typography>
+        <Typography variant="body1">
+          Room:{" "}
+          <Link
+            target="_blank"
+            href="https://goodliferesorts.guestybookings.com/properties/642c8459f043c8002cec1ecf?city=San+Diego"
+          >
+            The Bamboo Garden
+          </Link>
+        </Typography>
+        <Typography variant="body1">
+          Plenty of free street parking available!
+        </Typography>
+        <Typography variant="body1" sx={{ paddingBottom: theme.spacing(24) }}>
+          Hosted Zoom session for remote attendees
+        </Typography>
+      </TextContainer>
+    </Section>
+  );
+};
 
 export default LocationSection;

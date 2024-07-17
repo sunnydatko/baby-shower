@@ -51,7 +51,6 @@ const theme = createTheme({
       textAlign: "center",
       fontSize: "24px",
     },
-
     body1: {
       fontFamily: '"Anybody", sans-serif',
       fontSize: "20px",
